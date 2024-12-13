@@ -7,7 +7,7 @@
     if (isLoggedIn) {
       displayDashboard();
     } else {
-      document.getElementById("home-buttons").style.display = "flex";
+      document.getElementById("login-form").style.display = "block";
     }
 
     // Handle token and email in URL parameters for password reset
@@ -29,7 +29,7 @@
     });
 
     // Adjust home button display based on form
-    document.getElementById("home-buttons").style.display = (formId === 'signup-form' || formId === 'login-form' || formId === 'reset-form') ? "none" : "flex";
+    document.getElementById("login-form").style.display = (formId === 'signup-form'  || formId === 'reset-form') ? "none" : "block";
 
     const formToShow = document.getElementById(formId);
     formToShow.classList.add('active');
